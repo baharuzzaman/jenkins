@@ -1,5 +1,7 @@
 package ups.stepDef;
 
+import static org.testng.Assert.fail;
+
 import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
@@ -26,6 +28,7 @@ public class UpsLoginStepDef {
 	@Then("Customer able to launch in UPS login page successfully")
 	public void customer_able_to_launch_in_UPS_login_page_successfully() {
 		upsAction.verifyLoginpage();
+		fail();
 	}
 
 	@When("Customer put wrong Username {string} and wrong Password {string}")
